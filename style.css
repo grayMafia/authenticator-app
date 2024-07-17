@@ -28,7 +28,7 @@ body{
     border-radius: 4px;
 }
 
-.form-control{
+input[type="text"] {
     width: 80%;
     height: 50px;
     margin: 20px auto;
@@ -39,11 +39,23 @@ body{
     background-color: #232930;
     border: 1px solid #424b54;
     text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.form-control:focus{
+input[type="text"]:focus{
     background-color: #232930;
     color: #808080;
+    border: 1px solid #424b54;
+}
+
+input[type="text"]:read-only{
+    background-color: #232930;
+    color: #808080;
+}
+
+#outputPin.animate{
+    background-color: #30363d;
+    transform: scale(1.1);
 }
 
 .generate-btn{
@@ -104,10 +116,11 @@ body{
     background-color: #24292f;
 }
 
-.try-left{
+#tryLeft{
     margin-top: 10px;
     color: #df1439;
     font-size: 14px;
+    display: none;
 }
 
 .note-section{
@@ -121,4 +134,5 @@ body{
     background-color:#161b22;
     border: 1px solid #30363d;
     border-radius: 20px;
+    display: none;
 }
